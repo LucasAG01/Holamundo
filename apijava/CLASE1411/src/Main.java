@@ -34,6 +34,40 @@ public class Main {
         //O puedo programar un método que reciba 2 enteros y un tipo de motor y que lo cambie.
         c3.getMotor().cambiarMotor(34,700,TipoMotor.Diesel); //método en Motor.
 
+        System.out.println(c4.toString());
+
+
+        //Matrices de coches
+
+        Coche misCoches[]=new Coche[100]; //No estoy creando 100 coches, son 100 referencias de tipo coche(todas null).
+
+        //Para apuntar a un coche tengo que crearlo
+        misCoches[0]=c2;
+        misCoches[1]=new Coche("43545UTY",LocalDate.of(2019,Month.DECEMBER,23),"Ferrari","SF90",788889,new Motor(123,3244,TipoMotor.Hibrido));
+        misCoches[2]=new Coche("321213OI",LocalDate.of(2023,Month.JUNE,23),"Porsche","Caiman",123444,123,400,TipoMotor.Gasolina);
+        misCoches[3]=new Coche("3423432UY",LocalDate.of(2533,Month.APRIL,30),"kys","nigg",445,m2);
+        System.out.println(misCoches[0]);  //Se ejecuta bien porque he creado el contructor de coche.
+
+        //Guadar c1 en la primera posicion vacía.
+
+        for(int i=0;i< misCoches.length;i++){
+            if(misCoches[i]==null){ //Si mis ciches d ei es null (vacia)
+                misCoches[i]=c1;  //Guiardo c1
+                break; //Salgo porque sino estaria guardando en null c1.
+            }
+        }
+
+        //Calcuar el precio total de los coches de la matriz.
+
+        float sumaTotal=0;
+        for(Coche c:misCoches){
+            if(c!=null){
+            sumaTotal=sumaTotal+c.getPrecio();       //ALGORITMOS COMO ESTOS VAN A CAER EN EL EXÁMEN
+        } else{
+                break;
+            }
+        }
+        System.out.println("Precio total de los coches: "+sumaTotal+" euros"); //Cannot invoke "Coche.getPrecio()" because "c" is null --> hay espacios null en la matriz.
 
 
     }

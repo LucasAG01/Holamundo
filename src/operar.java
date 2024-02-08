@@ -1,3 +1,8 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.InputMismatchException;
+
 public class operar {
     public static void main(String[] args) {
      // PSVM PARA CREAR UNA NUEVA CLASE sout para un System.out.imptln
@@ -113,6 +118,21 @@ public class operar {
         //Ponemos final al principio del dato al declarar para que este no se pueda cambiar más
 
         final int MAXIMO=4;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
